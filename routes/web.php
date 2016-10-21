@@ -11,5 +11,6 @@
 |
 */
 
-Route::get('/', 'Home@index');
+Route::get('/', ['middleware' => 'auth','Home@index']);
+Route::get('/about', 'About@about');
 
